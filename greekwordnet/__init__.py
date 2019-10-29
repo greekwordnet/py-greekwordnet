@@ -1,0 +1,1 @@
+from .greekwordnet import GreekWordNet
