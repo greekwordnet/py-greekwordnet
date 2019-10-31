@@ -1,4 +1,4 @@
-Greek WordNet 2.0 API
+Ancient Greek WordNet API
 =====================
 
-This module provides a light-weight wrapper for the Greek WordNet 2.0 API (https://greekwordnet.chs.harvard.edu).
+This module provides a light-weight wrapper for the Ancient Greek WordNet API (https://greekwordnet.chs.harvard.edu).
