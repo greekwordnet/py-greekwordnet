@@ -6,7 +6,7 @@ with open('README.md', encoding='utf-8') as f:
 
 setup(
     name='greekwordnet',
-    version='0.0.1-post1',
+    version='0.0.3',
     packages=find_packages(),
     url='https://greekwordnet.chs.harvard.edu',
     license='GNU General Public License v3.0',
