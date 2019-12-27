@@ -317,6 +317,12 @@ class GreekWordNet:
                 {"Authorization": f'Token {results.json()["token"]}'}
             )
 
+    def status(self):
+        results = self.session.get(
+            f"{self.host}/api/status/?format=json"
+        ).json()
+        return results
+
 
 relation_types = {
     "!":  "antonyms",
