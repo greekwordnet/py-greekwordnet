@@ -1,7 +1,13 @@
 """A light-weight wrapper for the Greek WordNet API"""
 
-import requests
+import os
 from functools import lru_cache
+
+import requests
+from dotenv import load_dotenv
+
+load_dotenv()
+GREEKWORDNET_TOKEN = os.getenv("GREEKWORDNET_TOKEN", None)
 
 
 class Semfields:
@@ -238,7 +244,7 @@ class Lemmas:
 class GreekWordNet:
     def __init__(self, host="https://greekwordnet.chs.harvard.edu", token=None):
         self.host = host.rstrip("/")
-        self.token = token
+        self.token = token if token else GREEKWORDNET_TOKEN
 
         self.session = requests.Session()
 
