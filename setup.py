@@ -10,7 +10,7 @@ requirements = [
 
 setup(
     name="greekwordnet",
-    version="0.0.5",
+    version="0.0.6",
     packages=find_packages(),
     url="https://greekwordnet.chs.harvard.edu",
     license="GNU General Public License v3.0",

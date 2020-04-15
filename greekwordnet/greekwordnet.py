@@ -247,6 +247,10 @@ class GreekWordNet:
         self.token = token if token else GREEKWORDNET_TOKEN
 
         self.session = requests.Session()
+        if self.token:
+            self.session.headers.update(
+                {"Authorization": f'Token {self.token}'}
+            )
 
     @lru_cache(maxsize=None)
     def lemmatize(self, form: str, pos: str = None):
@@ -319,8 +323,9 @@ class GreekWordNet:
             verify=True,
         )
         if results:
+            self.token = results.json()["token"]
             self.session.headers.update(
-                {"Authorization": f'Token {results.json()["token"]}'}
+                {"Authorization": f'Token {self.token}'}
             )
 
     def status(self):
